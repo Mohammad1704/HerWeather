@@ -133,6 +133,14 @@ main {
     font-weight: bold;
 }
 
+.period-circle p:first-child {
+    font-size: 0.8em; /* Reduced by 20% */
+}
+
+.period-circle p:last-child {
+    font-size: 0.8em; /* Reduced by 20% */
+}
+
 .insights-section {
     width: 100%;
     padding: 0 20px;
