@@ -7,23 +7,82 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Menstrual Cycle Tracker</h1>
-        <div class="input-section">
-            <label for="startDate">Start Date:</label>
-            <input type="date" id="startDate">
-            <label for="endDate">End Date:</label>
-            <input type="date" id="endDate">
-            <button id="logPeriod">Log Period</button>
-        </div>
-        <div class="output-section">
-            <p>Average Cycle Length: <span id="cycleLength"></span> days</p>
-            <p>Predicted Next Period: <span id="predictedPeriod"></span></p>
-        </div>
-        <div class="history-section">
-            <h2>Period History</h2>
-            <ul id="periodHistory"></ul>
-        </div>
+    <div class="app-container">
+        <header>
+            <div class="header-content">
+                <h1 id="greeting"></h1>
+                <div class="menu-icon">☰</div>
+            </div>
+        </header>
+        <main>
+            <div class="calendar-section">
+                <div class="day-labels">
+                    <span>T</span>
+                    <span>F</span>
+                    <span>S</span>
+                    <span>S</span>
+                    <span>M</span>
+                    <span>T</span>
+                    <span>W</span>
+                </div>
+                <div class="day-numbers">
+                    <span class="selected">2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span class="current-day">6</span>
+                    <span>7</span>
+                    <span>8</span>
+                </div>
+            </div>
+            <div class="period-info">
+                <div class="period-circle">
+                    <p>Your period starts in</p>
+                    <p class="days-left" id="daysUntilPeriod">4 days</p>
+                    <p id="pregnancyChance">Low pregnancy chance</p>
+                </div>
+            </div>
+            <div class="insights-section">
+                <h2>Your daily insights</h2>
+                <div class="insights-grid">
+                    <div class="insight-card cycle-day">
+                        <p>Cycle day</p>
+                        <p class="value" id="cycleDay">18</p>
+                    </div>
+                    <div class="insight-card ovulation">
+                        <p>Ovulation</p>
+                        <p class="value" id="ovulationDay">3</p>
+                    </div>
+                     <div class="insight-card symptoms">
+                        <p>Symptoms</p>
+                        <div class="symptoms-icons" id="symptomsIcons">
+                            <span class="symptom-icon">💊</span>
+                            <span class="symptom-icon">✨</span>
+                        </div>
+                    </div>
+                    <div class="insight-card add-info" id="addInfoButton">
+                        <p>Add info</p>
+                        <p class="add-icon">+</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="nav-bar">
+                <div class="nav-item active" data-target="home">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </div>
+                <div class="nav-item" data-target="calendar">
+                    <span class="nav-icon">📅</span>
+                    <span class="nav-text">Calendar</span>
+                </div>
+                <div class="nav-item" data-target="profile">
+                    <span class="nav-icon">👤</span>
+                    <span class="nav-text">Profile</span>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
