@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstrual Cycle Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Menstrual Cycle Tracker</h1>
+        <div class="input-section">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate">
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate">
+            <button id="logPeriod">Log Period</button>
+        </div>
+        <div class="output-section">
+            <p>Average Cycle Length: <span id="cycleLength"></span> days</p>
+            <p>Predicted Next Period: <span id="predictedPeriod"></span></p>
+        </div>
+        <div class="history-section">
+            <h2>Period History</h2>
+            <ul id="periodHistory"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
